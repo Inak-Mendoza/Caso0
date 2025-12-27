@@ -1,0 +1,197 @@
+file 7502 1765985078                                            
+version 2
+run UDP-0-20251217-15:24:18-11858
+attr configname UDP
+attr datetime 20251217-15:24:18
+attr experiment UDP
+attr inifile netconf.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network manets
+attr processid 11858
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.nodoFijo1.numApps 1
+param **.nodoFijo2.numApps 1
+param **.nodoFijo1.app[0].typename "\"UdpBasicApp\""
+param **.nodoFijo1.app[0].destAddresses "\"nodoFijo2\""
+param **.nodoFijo1.app[0].destPort 1000
+param **.nodoFijo1.app[0].startTime 5s
+param **.nodoFijo1.app[0].messageLength 50B
+param **.nodoFijo1.app[0].sendInterval 0.25s
+param **.nodoFijo2.app[0].typename "\"UdpEchoApp\""
+param **.nodoFijo2.app[0].localPort 1000
+param **.wlan[*].typename "\"AckingWirelessInterface\""
+param **.wlan[*].bitrate 2Mbps
+param **.wlan[*].mac.headerLength 20B
+param **.wlan[*].radio.typename "\"UnitDiskRadio\""
+param **.wlan[*].radio.transmitter.headerLength 96b
+param **.wlan[*].radio.transmitter.communicationRange 400m
+param **.wlan[*].radio.transmitter.interferenceRange 0m
+param **.wlan[*].radio.transmitter.detectionRange 0m
+param **.wlan[*].radio.receiver.ignoreInterference true
+param *.n 7
+param **.mobility.initFromDisplayString false
+param **.nodoMovil[*].mobility.typename "\"MassMobility\""
+param **.nodoMovil[*].mobility.speed 1mps
+param **.mobility.constraintAreaMinZ 0m
+param **.mobility.constraintAreaMaxZ 0m
+param **.mobility.constraintAreaMinX 0m
+param **.mobility.constraintAreaMinY 0m
+param **.mobility.constraintAreaMaxX 1200m
+param **.mobility.constraintAreaMaxY 600m
+param **.nodoMovil[*].mobility.changeInterval "normal(5s, 0.1s)"
+param **.nodoMovil[*].mobility.changeAngleBy "normal(0deg, 30deg)"
+param **.nodoFijo1.mobility.initialX 0m
+param **.nodoFijo1.mobility.initialY 300m
+param **.nodoFijo2.mobility.initialX 1200m
+param **.nodoFijo2.mobility.initialY 300m
+param **.dataLinkVisualizer.displayLinks true
+param **.nodoMovil*.wlan[*].radio.displayCommunicationRange true
+param **.networkRouteVisualizer.displayRoutes true
+
+vector 0 manets.nodoFijo1.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 manets.nodoFijo2.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 2 manets.nodoMovil[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 manets.nodoMovil[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 4 manets.nodoMovil[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 manets.nodoMovil[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 6 manets.nodoMovil[4].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 manets.nodoMovil[5].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 8 manets.nodoMovil[6].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 manets.nodoFijo1.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 10 manets.nodoFijo1.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 11 manets.nodoFijo2.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 12 manets.nodoFijo2.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 13 manets.nodoMovil[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 14 manets.nodoMovil[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 15 manets.nodoMovil[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 16 manets.nodoMovil[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 17 manets.nodoMovil[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 18 manets.nodoMovil[2].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 19 manets.nodoMovil[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 20 manets.nodoMovil[3].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 21 manets.nodoMovil[4].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 22 manets.nodoMovil[4].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 23 manets.nodoMovil[5].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 24 manets.nodoMovil[5].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 25 manets.nodoMovil[6].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 26 manets.nodoMovil[6].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+0	6865 24 0 0 0 0 3 0 4 4 16
+1	6889 24 0 0 0 0 3 0 4 4 16
+2	6913 24 0 0 0 0 3 0 4 4 16
+3	6937 24 0 0 0 0 3 0 4 4 16
+4	6961 24 0 0 0 0 3 0 4 4 16
+5	6985 24 0 0 0 0 3 0 4 4 16
+6	7009 24 0 0 0 0 3 0 4 4 16
+7	7033 24 0 0 0 0 3 0 4 4 16
+8	7057 24 0 0 0 0 3 0 4 4 16
+9	7081 8 0 0 0 0 1 1 1 1 1
+10	7089 9 0 0 0 0 1 1 1 1 1
+11	7098 9 0 0 0 0 1 1 1 1 1
+12	7107 9 0 0 0 0 1 1 1 1 1
+13	7116 9 0 0 0 0 1 1 1 1 1
+14	7125 9 0 0 0 0 1 1 1 1 1
+15	7134 9 0 0 0 0 1 1 1 1 1
+16	7143 9 0 0 0 0 1 1 1 1 1
+17	7152 9 0 0 0 0 1 1 1 1 1
+18	7161 9 0 0 0 0 1 1 1 1 1
+19	7170 9 0 0 0 0 1 1 1 1 1
+20	7179 9 0 0 0 0 1 1 1 1 1
+21	7188 9 0 0 0 0 1 1 1 1 1
+22	7197 9 0 0 0 0 1 1 1 1 1
+23	7206 9 0 0 0 0 1 1 1 1 1
+24	7215 9 0 0 0 0 1 1 1 1 1
+25	7224 9 0 0 0 0 1 1 1 1 1
+26	7233 9 0 0 0 0 1 1 1 1 1
+vector 27 manets.nodoFijo1.app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+27	7383 118 68 68 0.1 1 10 0 0 0 0
+

@@ -1,0 +1,385 @@
+file 16998 1765985041                                           
+version 2
+run DSDV-0-20251217-15:22:57-11782
+attr configname DSDV
+attr datetime 20251217-15:22:57
+attr experiment DSDV
+attr inifile netconf.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network manets
+attr processid 11782
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.nodoMovil[*].routing.typename "\"Dsdv\""
+param **.nodoFijo*.routing.typename "\"Dsdv\""
+param **.nodoFijo1.numApps 1
+param **.nodoFijo2.numApps 1
+param **.nodoFijo1.app[0].typename "\"UdpBasicApp\""
+param **.nodoFijo1.app[0].destAddresses "\"nodoFijo2\""
+param **.nodoFijo1.app[0].destPort 1000
+param **.nodoFijo1.app[0].startTime 5s
+param **.nodoFijo1.app[0].messageLength 50B
+param **.nodoFijo1.app[0].sendInterval 0.25s
+param **.nodoFijo2.app[0].typename "\"UdpEchoApp\""
+param **.nodoFijo2.app[0].localPort 1000
+param **.wlan[*].typename "\"AckingWirelessInterface\""
+param **.wlan[*].bitrate 2Mbps
+param **.wlan[*].mac.headerLength 20B
+param **.wlan[*].radio.typename "\"UnitDiskRadio\""
+param **.wlan[*].radio.transmitter.headerLength 96b
+param **.wlan[*].radio.transmitter.communicationRange 400m
+param **.wlan[*].radio.transmitter.interferenceRange 0m
+param **.wlan[*].radio.transmitter.detectionRange 0m
+param **.wlan[*].radio.receiver.ignoreInterference true
+param *.n 7
+param **.mobility.initFromDisplayString false
+param **.nodoMovil[*].mobility.typename "\"MassMobility\""
+param **.nodoMovil[*].mobility.speed 1mps
+param **.mobility.constraintAreaMinZ 0m
+param **.mobility.constraintAreaMaxZ 0m
+param **.mobility.constraintAreaMinX 0m
+param **.mobility.constraintAreaMinY 0m
+param **.mobility.constraintAreaMaxX 1200m
+param **.mobility.constraintAreaMaxY 600m
+param **.nodoMovil[*].mobility.changeInterval "normal(5s, 0.1s)"
+param **.nodoMovil[*].mobility.changeAngleBy "normal(0deg, 30deg)"
+param **.nodoFijo1.mobility.initialX 0m
+param **.nodoFijo1.mobility.initialY 300m
+param **.nodoFijo2.mobility.initialX 1200m
+param **.nodoFijo2.mobility.initialY 300m
+param **.dataLinkVisualizer.displayLinks true
+param **.nodoMovil*.wlan[*].radio.displayCommunicationRange true
+param **.networkRouteVisualizer.displayRoutes true
+
+vector 0 manets.nodoFijo1.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 manets.nodoFijo2.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 2 manets.nodoMovil[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 manets.nodoMovil[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 4 manets.nodoMovil[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 manets.nodoMovil[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 6 manets.nodoMovil[4].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 manets.nodoMovil[5].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 8 manets.nodoMovil[6].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 manets.nodoFijo1.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 10 manets.nodoFijo1.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 11 manets.nodoFijo2.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 12 manets.nodoFijo2.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 13 manets.nodoMovil[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 14 manets.nodoMovil[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 15 manets.nodoMovil[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 16 manets.nodoMovil[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 17 manets.nodoMovil[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 18 manets.nodoMovil[2].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 19 manets.nodoMovil[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 20 manets.nodoMovil[3].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 21 manets.nodoMovil[4].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 22 manets.nodoMovil[4].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 23 manets.nodoMovil[5].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 24 manets.nodoMovil[5].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 25 manets.nodoMovil[6].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 26 manets.nodoMovil[6].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 27 manets.nodoMovil[5].wlan[0].mac rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 28 manets.nodoMovil[5].wlan[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 29 manets.nodoMovil[5].wlan[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 30 manets.nodoMovil[5].wlan[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 31 manets.nodoMovil[5].wlan[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 32 manets.nodoMovil[5].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 33 manets.nodoFijo1.wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 34 manets.nodoFijo1.wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 35 manets.nodoMovil[3].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 36 manets.nodoMovil[3].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 37 manets.nodoMovil[2].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 38 manets.nodoMovil[2].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 39 manets.nodoMovil[4].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 40 manets.nodoMovil[4].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 41 manets.nodoMovil[4].wlan[0].mac rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 42 manets.nodoMovil[4].wlan[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 43 manets.nodoMovil[4].wlan[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 44 manets.nodoMovil[4].wlan[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 45 manets.nodoMovil[4].wlan[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 46 manets.nodoMovil[4].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 47 manets.nodoMovil[5].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 48 manets.nodoMovil[5].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 49 manets.nodoMovil[0].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 50 manets.nodoMovil[0].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 51 manets.nodoMovil[1].wlan[0].mac rcvdPkFromLl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 52 manets.nodoMovil[1].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 53 manets.nodoMovil[3].wlan[0].mac rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 54 manets.nodoMovil[3].wlan[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 55 manets.nodoMovil[3].wlan[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 56 manets.nodoMovil[3].wlan[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 57 manets.nodoMovil[3].wlan[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 58 manets.nodoMovil[3].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 59 manets.nodoMovil[2].wlan[0].mac rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 60 manets.nodoMovil[2].wlan[0].mac.queue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 61 manets.nodoMovil[2].wlan[0].mac.queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 62 manets.nodoMovil[2].wlan[0].mac.queue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 63 manets.nodoMovil[2].wlan[0].mac.queue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 64 manets.nodoMovil[2].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+0	14476 24 0 0 0 0 3 0 4 4 16
+1	14500 24 0 0 0 0 3 0 4 4 16
+2	14524 24 0 0 0 0 3 0 4 4 16
+3	14548 24 0 0 0 0 3 0 4 4 16
+4	14572 24 0 0 0 0 3 0 4 4 16
+5	14596 24 0 0 0 0 3 0 4 4 16
+6	14620 24 0 0 0 0 3 0 4 4 16
+7	14644 24 0 0 0 0 3 0 4 4 16
+8	14668 24 0 0 0 0 3 0 4 4 16
+9	14692 141 0 122 0 0.173438544099 7 1 3 13 31
+10	14833 9 0 0 0 0 1 1 1 1 1
+11	14842 9 0 0 0 0 1 1 1 1 1
+12	14851 9 0 0 0 0 1 1 1 1 1
+13	14860 79 0 112 0 0.173166747712 4 1 3 8 20
+14	14939 9 0 0 0 0 1 1 1 1 1
+15	14948 55 0 57 0 0.075221708204 3 1 3 5 11
+16	15003 9 0 0 0 0 1 1 1 1 1
+17	15012 100 0 61 0 0.075221903521 5 1 3 9 21
+18	15112 57 0 117 0 0.173437420536 3 1 2 4 6
+19	15169 54 0 20 0 0.065982345174 3 1 3 5 11
+20	15223 55 0 89 0 0.106254345174 3 1 2 4 6
+21	15278 79 0 111 0 0.173166737251 4 1 3 8 20
+22	15357 55 0 48 0 0.075220586756 3 1 2 4 6
+23	15412 147 0 118 0 0.17343828597 7 1 3 13 31
+24	15559 54 0 15 0 0.065981538758 3 1 2 4 6
+25	15613 9 0 0 0 0 1 1 1 1 1
+26	15622 9 0 0 0 0 1 1 1 1 1
+27	15631 23 5 5 0.065709538758 0.065709538758 1 36 36 36 1296
+28	15654 23 5 5 0.065709538758 0.065709538758 1 36 36 36 1296
+29	15677 44 5 5 0.065709538758 0.065709538758 2 0 1 1 1
+30	15721 23 5 5 0.065709538758 0.065709538758 1 36 36 36 1296
+31	15744 22 5 5 0.065709538758 0.065709538758 1 0 0 0 0
+32	15766 23 5 5 0.065709538758 0.065709538758 1 56 56 56 3136
+33	15789 48 17 91 0.065982343079 0.106254742893 2 56 56 112 6272
+34	15837 48 17 91 0.065982343079 0.106254742893 2 36 36 72 2592
+35	15885 24 21 21 0.065982345174 0.065982345174 1 56 56 56 3136
+36	15909 24 21 21 0.065982345174 0.065982345174 1 36 36 36 1296
+37	15933 48 25 62 0.065982404246 0.075221903521 2 56 56 112 6272
+38	15981 48 25 62 0.065982404246 0.075221903521 2 36 36 72 2592
+39	16029 24 29 29 0.065982495897 0.065982495897 1 56 56 56 3136
+40	16053 24 29 29 0.065982495897 0.065982495897 1 36 36 36 1296
+41	16077 24 38 38 0.074948586756 0.074948586756 1 36 36 36 1296
+42	16101 24 38 38 0.074948586756 0.074948586756 1 36 36 36 1296
+43	16125 46 38 38 0.074948586756 0.074948586756 2 0 1 1 1
+44	16171 24 38 38 0.074948586756 0.074948586756 1 36 36 36 1296
+45	16195 23 38 38 0.074948586756 0.074948586756 1 0 0 0 0
+46	16218 24 38 38 0.074948586756 0.074948586756 1 56 56 56 3136
+47	16242 72 50 119 0.075221543943 0.17343828597 3 56 56 168 9408
+48	16314 72 50 119 0.075221543943 0.17343828597 3 36 36 108 3888
+49	16386 24 54 54 0.075221612143 0.075221612143 1 56 56 56 3136
+50	16410 24 54 54 0.075221612143 0.075221612143 1 36 36 36 1296
+51	16434 24 58 58 0.075221708204 0.075221708204 1 56 56 56 3136
+52	16458 24 58 58 0.075221708204 0.075221708204 1 36 36 36 1296
+53	16482 24 79 79 0.105982345174 0.105982345174 1 36 36 36 1296
+54	16506 24 79 79 0.105982345174 0.105982345174 1 36 36 36 1296
+55	16530 46 79 79 0.105982345174 0.105982345174 2 0 1 1 1
+56	16576 24 79 79 0.105982345174 0.105982345174 1 36 36 36 1296
+57	16600 23 79 79 0.105982345174 0.105982345174 1 0 0 0 0
+58	16623 24 79 79 0.105982345174 0.105982345174 1 56 56 56 3136
+59	16647 25 107 107 0.173165420536 0.173165420536 1 36 36 36 1296
+60	16672 25 107 107 0.173165420536 0.173165420536 1 36 36 36 1296
+61	16697 48 107 107 0.173165420536 0.173165420536 2 0 1 1 1
+62	16745 25 107 107 0.173165420536 0.173165420536 1 36 36 36 1296
+63	16770 24 107 107 0.173165420536 0.173165420536 1 0 0 0 0
+64	16794 25 107 107 0.173165420536 0.173165420536 1 56 56 56 3136
+vector 65 manets.nodoFijo1.app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+65	16960 37 122 122 0.1 0.173438544099 2 0 0 0 0
+

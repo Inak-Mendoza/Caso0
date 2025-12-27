@@ -1,0 +1,1680 @@
+file 1750581 1766856905                                         
+version 2
+run AODV-0-20251227-17:24:30-1146
+attr configname AODV
+attr datetime 20251227-17:24:30
+attr experiment AODV
+attr inifile netconf.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network ManetNet
+attr processid 1146
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.routingApp.typename "\"Aodv\""
+param *.numMobile 7
+param **.wlan[*].typename "\"Ieee80211Interface\""
+param **.wlan[*].mgmtType "\"Ieee80211MgmtAdhoc\""
+param **.wlan[*].mac.opMode "\"g(54Mbps)\""
+param **.wlan[*].radio.typename "\"Ieee80211Radio\""
+param **.wlan[*].radio.transmitter.power 20mW
+param **.wlan[*].radio.transmitter.bitrate 54Mbps
+param **.wlan[*].radio.receiver.sensitivity -85dBm
+param **.wlan[*].radio.receiver.snirThreshold 4dB
+param **.wlan[*].radio.transmitter.communicationRange 400m
+param **.nodoMovil[*].mobility.typename "\"RandomWaypointMobility\""
+param **.nodoMovil[*].mobility.initialX "uniform(0m, 1200m)"
+param **.nodoMovil[*].mobility.initialY "uniform(0m, 600m)"
+param **.nodoMovil[*].mobility.initialZ 0m
+param **.nodoMovil[*].mobility.speed "uniform(1mps, 10mps)"
+param **.nodoMovil[*].mobility.waitTime 0s
+param **.mobility.constraintAreaMinX 0m
+param **.mobility.constraintAreaMinY 0m
+param **.mobility.constraintAreaMinZ 0m
+param **.mobility.constraintAreaMaxX 1200m
+param **.mobility.constraintAreaMaxY 600m
+param **.mobility.constraintAreaMaxZ 0m
+param **.nodoFijo*.mobility.typename "\"StationaryMobility\""
+param **.nodoFijo1.mobility.initialX 0m
+param **.nodoFijo1.mobility.initialY 300m
+param **.nodoFijo2.mobility.initialX 1200m
+param **.nodoFijo2.mobility.initialY 300m
+param **.nodoMovil[*].numApps 1
+param **.nodoMovil[*].app[0].typename "\"UdpBasicApp\""
+param **.nodoMovil[*].app[0].destAddresses "\"nodoMovil[0] nodoMovil[1] nodoMovil[2] nodoMovil[3] nodoMovil[4] nodoMovil[5]\""
+param **.nodoMovil[*].app[0].destPort 4000
+param **.nodoMovil[*].app[0].startTime uniform(5s,10s)
+param **.nodoMovil[*].app[0].messageLength 256B
+param **.nodoMovil[*].app[0].sendInterval 50ms
+param **.nodoFijo1.numApps 1
+param **.nodoFijo2.numApps 1
+param **.nodoFijo1.app[0].typename "\"UdpBasicApp\""
+param **.nodoFijo1.app[0].destAddresses "\"nodoFijo2\""
+param **.nodoFijo1.app[0].destPort 5000
+param **.nodoFijo1.app[0].startTime 5s
+param **.nodoFijo1.app[0].messageLength 512B
+param **.nodoFijo1.app[0].sendInterval 20ms
+param **.nodoFijo2.app[0].typename "\"UdpSink\""
+param **.nodoFijo2.app[0].localPort 5000
+
+vector 0 ManetNet.nodoFijo1.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 ManetNet.nodoFijo1.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 2 ManetNet.nodoFijo2.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 ManetNet.nodoFijo2.wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 4 ManetNet.nodoMovil[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 ManetNet.nodoMovil[0].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 6 ManetNet.nodoMovil[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 ManetNet.nodoMovil[1].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 8 ManetNet.nodoMovil[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 ManetNet.nodoMovil[2].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 10 ManetNet.nodoMovil[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 11 ManetNet.nodoMovil[3].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 12 ManetNet.nodoMovil[4].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 13 ManetNet.nodoMovil[4].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 14 ManetNet.nodoMovil[5].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 15 ManetNet.nodoMovil[5].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 16 ManetNet.nodoMovil[6].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 17 ManetNet.nodoMovil[6].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 18 ManetNet.nodoFijo1.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 19 ManetNet.nodoFijo2.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 20 ManetNet.nodoMovil[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 21 ManetNet.nodoMovil[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 22 ManetNet.nodoMovil[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 23 ManetNet.nodoMovil[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 24 ManetNet.nodoMovil[4].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 25 ManetNet.nodoMovil[5].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 26 ManetNet.nodoMovil[6].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 27 ManetNet.nodoFijo1.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 28 ManetNet.nodoFijo2.wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 29 ManetNet.nodoMovil[0].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 30 ManetNet.nodoMovil[1].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 31 ManetNet.nodoMovil[2].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 32 ManetNet.nodoMovil[3].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 33 ManetNet.nodoMovil[4].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 34 ManetNet.nodoMovil[5].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 35 ManetNet.nodoMovil[6].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 36 ManetNet.nodoFijo1.app[0] packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 37 ManetNet.nodoFijo1.udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 38 ManetNet.nodoFijo1.ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 39 ManetNet.nodoFijo1.wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from upper layer, vector(packetBytes)"
+vector 40 ManetNet.nodoFijo1.wlan[0].mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 41 ManetNet.nodoFijo1.wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 42 ManetNet.nodoFijo1.wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr title "backoff periods, vector"
+vector 43 ManetNet.nodoFijo1.wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(backoffStarted)-count(backoffStopped)
+attr title "backoff active, vector"
+vector 44 ManetNet.nodoFijo1.wlan[0].mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 45 ManetNet.nodoFijo1.wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 46 ManetNet.nodoFijo1.wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetEnqueued) - count(packetDequeued)"
+attr title "queue length, vector"
+vector 47 ManetNet.nodoFijo1.wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr title "datarates selected, vector"
+vector 48 ManetNet.nodoFijo1.wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 49 ManetNet.nodoFijo1.wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(frameSequenceStarted)-count(frameSequenceFinished)
+attr title "frame sequence active, vector"
+vector 50 ManetNet.nodoFijo1.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 51 ManetNet.nodoFijo1.wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent, vector(packetBytes)"
+vector 52 ManetNet.nodoFijo1.wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, vector(packetBytes)"
+vector 53 ManetNet.nodoFijo1.wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , vector(packetBytes)"
+vector 54 ManetNet.nodoFijo1.wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, vector(packetBytes)"
+vector 55 ManetNet.nodoFijo1.wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetDequeued)
+attr title "queueing times, vector"
+vector 56 ManetNet.nodoMovil[0].wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 57 ManetNet.nodoMovil[0].wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received, vector(packetBytes)"
+vector 58 ManetNet.nodoMovil[0].wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, vector(packetBytes)"
+vector 59 ManetNet.nodoMovil[0].wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, vector(packetBytes)"
+vector 60 ManetNet.nodoMovil[0].wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, vector(packetBytes)"
+vector 61 ManetNet.nodoMovil[0].wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to upper layer, vector(packetBytes)"
+vector 62 ManetNet.nodoMovil[1].wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 63 ManetNet.nodoMovil[1].wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received, vector(packetBytes)"
+vector 64 ManetNet.nodoMovil[1].wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, vector(packetBytes)"
+vector 65 ManetNet.nodoMovil[1].wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, vector(packetBytes)"
+vector 66 ManetNet.nodoMovil[1].wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, vector(packetBytes)"
+vector 67 ManetNet.nodoMovil[1].wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to upper layer, vector(packetBytes)"
+vector 68 ManetNet.nodoMovil[2].wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 69 ManetNet.nodoMovil[2].wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received, vector(packetBytes)"
+vector 70 ManetNet.nodoMovil[2].wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, vector(packetBytes)"
+vector 71 ManetNet.nodoMovil[2].wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, vector(packetBytes)"
+vector 72 ManetNet.nodoMovil[2].wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, vector(packetBytes)"
+vector 73 ManetNet.nodoMovil[2].wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to upper layer, vector(packetBytes)"
+vector 74 ManetNet.nodoMovil[6].wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 75 ManetNet.nodoMovil[6].wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received, vector(packetBytes)"
+vector 76 ManetNet.nodoMovil[6].wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, vector(packetBytes)"
+vector 77 ManetNet.nodoMovil[6].wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, vector(packetBytes)"
+vector 78 ManetNet.nodoMovil[6].wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, vector(packetBytes)"
+vector 79 ManetNet.nodoMovil[6].wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to upper layer, vector(packetBytes)"
+vector 80 ManetNet.nodoMovil[4].wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 81 ManetNet.nodoMovil[4].wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received, vector(packetBytes)"
+vector 82 ManetNet.nodoMovil[4].wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, vector(packetBytes)"
+vector 83 ManetNet.nodoMovil[4].wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, vector(packetBytes)"
+vector 84 ManetNet.nodoMovil[4].wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, vector(packetBytes)"
+vector 85 ManetNet.nodoMovil[4].wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to upper layer, vector(packetBytes)"
+vector 86 ManetNet.nodoMovil[5].wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 87 ManetNet.nodoMovil[5].wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received, vector(packetBytes)"
+vector 88 ManetNet.nodoMovil[5].wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, vector(packetBytes)"
+vector 89 ManetNet.nodoMovil[5].wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, vector(packetBytes)"
+vector 90 ManetNet.nodoMovil[5].wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, vector(packetBytes)"
+vector 91 ManetNet.nodoMovil[5].wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to upper layer, vector(packetBytes)"
+vector 92 ManetNet.nodoMinterpolationmode none
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 93 ManetNet.nodoMovil[3].wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received, vector(packetBytes)"
+vector 94 ManetNet.nodoMovil[3].wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, vector(packetBytes)"
+vector 95 ManetNet.nodoMovil[3].wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, vector(packetBytes)"
+vector 96 ManetNet.nodoMovil[3].wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, vector(packetBytes)"
+vector 97 ManetNet.nodoMovil[3].wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to upper layer, vector(packetBytes)"
+0	21609 76 0 640 0 6.00005 7 0 3 12 30
+1	21685 8 0 0 0 0 1 0 0 0 0
+2	21693 24 0 0 0 0 3 0 2 2 4
+3	21717 8 0 0 0 0 1 0 0 0 0
+4	21725 24 0 0 0 0 3 0 2 2 4
+5	21749 8 0 0 0 0 1 0 0 0 0
+6	21757 24 0 0 0 0 3 0 2 2 4
+7	21781 8 0 0 0 0 1 0 0 0 0
+8	21789 24 0 0 0 0 3 0 2 2 4
+9	21813 8 0 0 0 0 1 0 0 0 0
+10	21821 27 0 0 0 0 3 0 2 2 4
+11	21848 9 0 0 0 0 1 0 0 0 0
+12	21857 27 0 0 0 0 3 0 2 2 4
+13	21884 9 0 0 0 0 1 0 0 0 0
+14	21893 27 0 0 0 0 3 0 2 2 4
+15	21920 9 0 0 0 0 1 0 0 0 0
+16	21929 27 0 0 0 0 3 0 2 2 4
+17	21956 9 0 0 0 0 1 0 0 0 0
+18	21965 65 0 640 0 6.00005 5 0 1 3 3
+19	22030 9 0 0 0 0 1 1 1 1 1
+20	22039 105 0 641 0 6.000051595101 5 1 3 9 21
+21	22144 101 0 645 0 6.00005169803 5 1 3 9 21
+22	22245 105 0 649 0 6.000051763092 5 1 3 9 21
+23	22350 105 0 665 0 6.000051837614 5 1 3 9 21
+24	22455 105 0 657 0 6.000051807699 5 1 3 9 21
+25	22560 105 0 661 0 6.000051828128 5 1 3 9 21
+26	22665 105 0 653 0 6.000051763094 5 1 3 9 21
+27	22770 10 0 0 0 0 1 31 31 31 961
+28	22780 10 0 0 0 0 1 31 31 31 961
+29	22790 10 0 0 0 0 1 31 31 31 961
+30	22800 10 0 0 0 0 1 31 31 31 961
+31	22810 10 0 0 0 0 1 31 31 31 961
+32	22820 10 0 0 0 0 1 31 31 31 961
+33	22830 10 0 0 0 0 1 31 31 31 961
+34	22840 10 0 0 0 0 1 31 31 31 961
+35	22850 10 0 0 0 0 1 31 31 31 961
+36	22860 1181 347 769 5 6.48 75 512 512 38400 19660800
+37	24041 1181 356 770 5 6.48 75 520 520 39000 20280000
+38	25222 24 357 615 5 6 2 28 28 56 1568
+39	25246 24 359 625 5 6 2 36 36 72 2592
+40	25270 24 359 625 5 6 2 64 64 128 8192
+41	25294 44 359 628 5 6 4 0 1 2 2
+42	25338 23 359 625 5 6 2 9 15 24 306
+43	25361 44 359 627 5 6 4 0 1 2 2
+44	25405 24 361 628 5 6 2 64 64 128 8192
+45	25429 22 361 628 5 6 2 0 0 0 0
+46	25451 56 361 639 5 6.00005 4 0 1 2 2
+47	25507 36 361 628 5 6 2 24000000 24000000 48000000 1.152e+15
+48	25543 24 361 628 5 6 2 64 64 128 8192
+49	25567 56 361 639 5 6.00005 4 0 1 2 2
+50	25623 112 362 640 5 6.00005 8 0 2 8 12
+51	25735 36 372 639 5.00005 6.00005 2 64 64 128 8192
+52	25771 36 372 639 5.00005 6.00005 2 64 64 128 8192
+53	25807 36 372 639 5.00005 6.00005 2 64 64 128 8192
+54	25843 36 372 639 5.00005 6.00005 2 64 64 128 8192
+55	25879 42 372 639 5.00005 6.00005 2 5e-05 5e-05 0.0001 5e-09
+56	25921 50 375 642 5.000051594543 6.000051595101 2 64 64 128 8192
+57	25971 50 375 642 5.000051594543 6.000051595101 2 64 64 128 8192
+58	26021 50 375 642 5.000051594543 6.000051595101 2 64 64 128 8192
+59	26071 50 375 642 5.000051594543 6.000051595101 2 64 64 128 8192
+60	26121 50 375 642 5.000051594543 6.000051595101 2 64 64 128 8192
+61	26171 50 375 642 5.000051594543 6.000051595101 2 36 36 72 2592
+62	26221 48 379 646 5.00005169298 6.00005169803 2 64 64 128 8192
+63	26269 48 379 646 5.00005169298 6.00005169803 2 64 64 128 8192
+64	26317 48 379 646 5.00005169298 6.00005169803 2 64 64 128 8192
+65	26365 48 379 646 5.00005169298 6.00005169803 2 64 64 128 8192
+66	26413 48 379 646 5.00005169298 6.00005169803 2 64 64 128 8192
+67	26461 48 379 646 5.00005169298 6.00005169803 2 36 36 72 2592
+68	26509 50 383 650 5.000051746426 6.000051763092 2 64 64 128 8192
+69	26559 50 383 650 5.000051746426 6.000051763092 2 64 64 128 8192
+70	26609 50 383 650 5.000051746426 6.000051763092 2 64 64 128 8192
+71	26659 50 383 650 5.000051746426 6.000051763092 2 64 64 128 8192
+72	26709 50 383 650 5.000051746426 6.000051763092 2 64 64 128 8192
+73	26759 50 383 650 5.000051746426 6.000051763092 2 36 36 72 2592
+74	26809 50 387 654 5.000051746848 6.000051763094 2 64 64 128 8192
+75	26859 50 387 654 5.000051746848 6.000051763094 2 64 64 128 8192
+76	26909 50 387 654 5.000051746848 6.000051763094 2 64 64 128 8192
+77	26959 50 387 654 5.000051746848 6.000051763094 2 64 64 128 8192
+78	27009 50 387 654 5.000051746848 6.000051763094 2 64 64 128 8192
+79	27059 50 387 654 5.000051746848 6.000051763094 2 36 36 72 2592
+80	27109 50 391 658 5.000051784101 6.000051807699 2 64 64 128 8192
+81	27159 50 391 658 5.000051784101 6.000051807699 2 64 64 128 8192
+82	27209 50 391 658 5.000051784101 6.000051807699 2 64 64 128 8192
+83	27259 50 391 658 5.000051784101 6.000051807699 2 64 64 128 8192
+84	27309 50 391 658 5.000051784101 6.000051807699 2 64 64 128 8192
+85	27359 50 391 658 5.000051784101 6.000051807699 2 36 36 72 2592
+86	27409 50 395 662 5.000051801406 6.000051828128 2 64 64 128 8192
+87	27459 50 395 662 5.000051801406 6.000051828128 2 64 64 128 8192
+88	27509 50 395 662 5.000051801406 6.000051828128 2 64 64 128 8192
+89	27559 50 395 662 5.000051801406 6.000051828128 2 64 64 128 8192
+90	27609 50 395 662 5.000051801406 6.000051828128 2 64 64 128 8192
+91	27659 50 395 662 5.000051801406 6.000051828128 2 36 36 72 2592
+92	27709 50 399 666 5.000051809223 6.000051837614 2 64 64 128 8192
+93	27759 50 399 666 5.000051809223 6.000051837614 2 64 64 128 8192
+94	27809 50 399 666 5.000051809223 6.000051837614 2 64 64 128 8192
+95	27859 50 399 666 5.000051809223 6.000051837614 2 64 64 128 8192
+96	27909 50 399 666 5.000051809223 6.000051837614 2 64 64 128 8192
+97	27959 50 399 666 5.000051809223 6.000051837614 2 36 36 72 2592
+
+ntention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr title "backoff periods, vector"
+vector 123 ManetNet.nodoMovil[5].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(backoffStarted)-count(backoffStopped)
+attr title "backoff active, vector"
+vector 124 ManetNet.nodoFijo2.wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 125 ManetNet.nodoFijo2.wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received, vector(packetBytes)"
+vector 126 ManetNet.nodoFijo2.wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, vector(packetBytes)"
+vector 127 ManetNet.nodoFijo2.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, vector(packetBytes)"
+vector 128 ManetNet.nodoFijo2.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, vector(packetBytes)"
+vector 129 ManetNet.nodoFijo2.wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to upper layer, vector(packetBytes)"
+vector 130 ManetNet.nodoFijo1.wlan[0].mac packetReceivedFromLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 131 ManetNet.nodoFijo1.wlan[0].mac.dcf packetReceivedFromPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received, vector(packetBytes)"
+vector 132 ManetNet.nodoFijo1.wlan[0].mac.dcf packetReceivedFromPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetReceivedFromPeer)
+attr title "packets received: multicast, vector(packetBytes)"
+vector 133 ManetNet.nodoFijo1.wlan[0].mac.dcf packetReceivedFromPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetReceivedFromPeer)
+attr title "packets received: broadcast, vector(packetBytes)"
+vector 134 ManetNet.nodoFijo1.wlan[0].mac.dcf packetReceivedFromPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetReceivedFromPeer)
+attr title "packets received: without retry, vector(packetBytes)"
+vector 135 ManetNet.nodoFijo1.wlan[0].mac packetSentToUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to upper layer, vector(packetBytes)"
+vector 136 ManetNet.nodoMovil[5].wlan[0].mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 137 ManetNet.nodoMovil[5].wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 138 ManetNet.nodoMovil[5].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetEnqueued) - count(packetDequeued)"
+attr title "queue length, vector"
+vector 139 ManetNet.nodoMovil[5].wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr title "datarates selected, vector"
+vector 140 ManetNet.nodoMovil[5].wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 141 ManetNet.nodoMovil[5].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(frameSequenceStarted)-count(frameSequenceFinished)
+attr title "frame sequence active, vector"
+vector 142 ManetNet.nodoMovil[5].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 143 ManetNet.nodoMovil[5].wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent, vector(packetBytes)"
+vector 144 ManetNet.nodoMovil[5].wlan[0].mac.dcf packetSentToPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, vector(packetBytes)"
+vector 145 ManetNet.nodoMovil[5].wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, vector(packetBytes)"
+vector 146 ManetNet.nodoMovil[5].wlan[0].mac.rx nav:vector ETV
+attr interpolationmode linear
+attr source navChanged
+attr title "network allocation vector, vector"
+vector 147 ManetNet.nodoMovil[3].wlan[0].mac.dcf packetReceivedFromPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, vector(packetBytes)"
+vector 148 ManetNet.nodoMovil[4].wlan[0].mac.rx nav:vector ETV
+attr interpolationmode linear
+attr source navChanged
+attr title "network allocation vector, vector"
+vector 149 ManetNet.nodoMovil[4].wlan[0].mac.dcf packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 150 ManetNet.nodoMovil[4].wlan[0].mac.dcf packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 151 ManetNet.nodoMovil[4].wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 152 ManetNet.nodoMovil[4].wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+
+ttr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 153 ManetNet.nodoMovil[6].wlan[0].mac.rx nav:vector ETV
+attr interpolationmode linear
+attr source navChanged
+attr title "network allocation vector, vector"
+vector 154 ManetNet.nodoMovil[6].wlan[0].mac.dcf packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 155 ManetNet.nodoMovil[6].wlan[0].mac.dcf packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 156 ManetNet.nodoMovil[6].wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 157 ManetNet.nodoMovil[6].wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 158 ManetNet.nodoMovil[1].wlan[0].mac.rx nav:vector ETV
+attr interpolationmode linear
+attr source navChanged
+attr title "network allocation vector, vector"
+vector 159 ManetNet.nodoMovil[1].wlan[0].mac.dcf packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 160 ManetNet.nodoMovil[1].wlan[0].mac.dcf packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 161 ManetNet.nodoMovil[1].wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 162 ManetNet.nodoMovil[1].wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 163 ManetNet.nodoMovil[2].wlan[0].mac.rx nav:vector ETV
+attr interpolationmode linear
+attr source navChanged
+attr title "network allocation vector, vector"
+vector 164 ManetNet.nodoMovil[2].wlan[0].mac.dcf packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 165 ManetNet.nodoMovil[2].wlan[0].mac.dcf packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 166 ManetNet.nodoMovil[2].wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 167 ManetNet.nodoMovil[2].wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 168 ManetNet.nodoMovil[0].wlan[0].mac.rx nav:vector ETV
+attr interpolationmode linear
+attr source navChanged
+attr title "network allocation vector, vector"
+vector 169 ManetNet.nodoMovil[0].wlan[0].mac.dcf packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 170 ManetNet.nodoMovil[0].wlan[0].mac.dcf packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 171 ManetNet.nodoMovil[0].wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 172 ManetNet.nodoMovil[0].wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 173 ManetNet.nodoFijo2.wlan[0].mac.rx nav:vector ETV
+attr interpolationmode linear
+attr source navChanged
+attr title "network allocation vector, vector"
+vector 174 ManetNet.nodoFijo2.wlan[0].mac.dcf packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 175 ManetNet.nodoFijo2.wlan[0].mac.dcf packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 176 ManetNet.nodoFijo2.wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 177 ManetNet.nodoFijo2.wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 178 ManetNet.nodoFijo1.wlan[0].mac.rx nav:vector ETV
+attr interpolationmode linear
+attr source navChanged
+attr title "network allocation vector, vector"
+vector 179 ManetNet.nodoFijo1.wlan[0].mac.dcf packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 180 ManetNet.nodoFijo1.wlan[0].mac.dcf packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 181 ManetNet.nodoFijo1.wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 182 ManetNet.nodoFijo1.wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 183 ManetNet.nodoMovil[3].wlan[0].mac.dcf packetSentToPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, vector(packetBytes)"
+vector 184 ManetNet.nodoMovil[5].wlan[0].mac.dcf packetReceivedFromPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, vector(packetBytes)"
+vector 185 ManetNet.nodoMovil[5].wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetDequeued)
+attr title "queueing times, vector"
+vector 186 ManetNet.nodoMovil[3].wlan[0].mac.rx nav:vector ETV
+attr interpolationmode linear
+attr source navChanged
+attr title "network allocation vector, vector"
+vector 187 ManetNet.nodoMovil[5].udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 188 ManetNet.nodoMovil[5].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), vector(count)"
+vector 189 ManetNet.nodoMovil[0].ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 190 ManetNet.nodoMovil[0].wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from upper layer, vector(packetBytes)"
+vector 191 ManetNet.nodoMovil[0].wlan[0].mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 192 ManetNet.nodoMovil[0].wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 193 ManetNet.nodoMovil[0].wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr title "backoff periods, vector"
+vector 194 ManetNet.nodoMovil[0].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(backoffStarted)-count(backoffStopped)
+attr title "backoff active, vector"
+vector 195 ManetNet.nodoMovil[0].wlan[0].mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 196 ManetNet.nodoMovil[0].wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 197 ManetNet.nodoMovil[0].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetEnqueued) - count(packetDequeued)"
+attr title "queue length, vector"
+vector 198 ManetNet.nodoMovil[0].wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr title "datarates selected, vector"
+vector 199 ManetNet.nodoMovil[0].wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 200 ManetNet.nodoMovil[0].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(frameSequenceStarted)-count(frameSequenceFinished)
+attr title "frame sequence active, vector"
+vector 201 ManetNet.nodoMovil[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 202 ManetNet.nodoMovil[0].wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent, vector(packetBytes)"
+vector 203 ManetNet.nodoMovil[0].wlan[0].mac.dcf packetSentToPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, vector(packetBytes)"
+vector 204 ManetNet.nodoMovil[0].wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, vector(packetBytes)"
+vector 205 ManetNet.nodoMovil[5].wlan[0].mac.dcf packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 206 ManetNet.nodoMovil[5].wlan[0].mac.dcf packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 207 ManetNet.nodoMovil[5].wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 208 ManetNet.nodoMovil[5].wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 209 ManetNet.nodoMovil[0].wlan[0].mac.dcf packetReceivedFromPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, vector(packetBytes)"
+vector 210 ManetNet.nodoMovil[0].wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetDequeued)
+attr title "queueing times, vector"
+vector 211 ManetNet.nodoMovil[0].udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 212 ManetNet.nodoMovil[0].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), vector(count)"
+vector 213 ManetNet.nodoMovil[2].ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 214 ManetNet.nodoMovil[2].wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from upper layer, vector(packetBytes)"
+vector 215 ManetNet.nodoMovil[2].wlan[0].mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 216 ManetNet.nodoMovil[2].wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 217 ManetNet.nodoMovil[2].wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr title "backoff periods, vector"
+vector 218 ManetNet.nodoMovil[2].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(backoffStarted)-count(backoffStopped)
+attr title "backoff active, vector"
+vector 219 ManetNet.nodoMovil[2].wlan[0].mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 220 ManetNet.nodoMovil[2].wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 221 ManetNet.nodoMovil[2].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetEnqueued) - count(packetDequeued)"
+attr title "queue length, vector"
+vector 222 ManetNet.nodoMovil[2].wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr title "datarates selected, vector"
+vector 223 ManetNet.nodoMovil[2].wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 224 ManetNet.nodoMovil[2].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(frameSequenceStarted)-count(frameSequenceFinished)
+attr title "frame sequence active, vector"
+vector 225 ManetNet.nodoMovil[2].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 226 ManetNet.nodoMovil[2].wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent, vector(packetBytes)"
+vector 227 ManetNet.nodoMovil[2].wlan[0].mac.dcf packetSentToPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, vector(packetBytes)"
+vector 228 ManetNet.nodoMovil[2].wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, vector(packetBytes)"
+vector 229 ManetNet.nodoMovil[2].wlan[0].mac.dcf packetReceivedFromPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, vector(packetBytes)"
+vector 230 ManetNet.nodoMovil[2].wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetDequeued)
+attr title "queueing times, vector"
+vector 231 ManetNet.nodoMovil[2].udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 232 ManetNet.nodoMovil[2].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), vector(count)"
+vector 233 ManetNet.nodoMovil[3].lo[0].lo rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 234 ManetNet.nodoMovil[3].lo[0].lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 235 ManetNet.nodoMovil[3].udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 236 ManetNet.nodoMovil[3].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), vector(count)"
+vector 237 ManetNet.nodoMovil[4].ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 238 ManetNet.nodoMovil[4].wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from upper layer, vector(packetBytes)"
+vector 239 ManetNet.nodoMovil[4].wlan[0].mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 240 ManetNet.nodoMovil[4].wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 241 ManetNet.nodoMovil[4].wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr title "backoff periods, vector"
+vector 242 ManetNet.nodoMovil[4].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(backoffStarted)-count(backoffStopped)
+attr title "backoff active, vector"
+vector 243 ManetNet.nodoMovil[4].wlan[0].mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 244 ManetNet.nodoMovil[4].wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 245 ManetNet.nodoMovil[4].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetEnqueued) - count(packetDequeued)"
+attr title "queue length, vector"
+vector 246 ManetNet.nodoMovil[4].wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr title "datarates selected, vector"
+vector 247 ManetNet.nodoMovil[4].wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 248 ManetNet.nodoMovil[4].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(frameSequenceStarted)-count(frameSequenceFinished)
+attr title "frame sequence active, vector"
+vector 249 ManetNet.nodoMovil[4].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 250 ManetNet.nodoMovil[4].wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent, vector(packetBytes)"
+vector 251 ManetNet.nodoMovil[4].wlan[0].mac.dcf packetSentToPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, vector(packetBytes)"
+vector 252 ManetNet.nodoMovil[4].wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, vector(packetBytes)"
+vector 253 ManetNet.nodoMovil[4].wlan[0].mac.dcf packetReceivedFromPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, vector(packetBytes)"
+vector 254 ManetNet.nodoMovil[4].wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetDequeued)
+attr title "queueing times, vector"
+vector 255 ManetNet.nodoMovil[4].udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 256 ManetNet.nodoMovil[4].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), vector(count)"
+vector 257 ManetNet.nodoMovil[1].ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 258 ManetNet.nodoMovil[1].wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from upper layer, vector(packetBytes)"
+vector 259 ManetNet.nodoMovil[1].wlan[0].mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 260 ManetNet.nodoMovil[1].wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 261 ManetNet.nodoMovil[1].wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr title "backoff periods, vector"
+vector 262 ManetNet.nodoMovil[1].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(backoffStarted)-count(backoffStopped)
+attr title "backoff active, vector"
+vector 263 ManetNet.nodoMovil[1].wlan[0].mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 264 ManetNet.nodoMovil[1].wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 265 ManetNet.nodoMovil[1].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetEnqueued) - count(packetDequeued)"
+attr title "queue length, vector"
+vector 266 ManetNet.nodoMovil[1].wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr title "datarates selected, vector"
+vector 267 ManetNet.nodoMovil[1].wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 268 ManetNet.nodoMovil[1].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(frameSequenceStarted)-count(frameSequenceFinished)
+attr title "frame sequence active, vector"
+vector 269 ManetNet.nodoMovil[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 270 ManetNet.nodoMovil[1].wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent, vector(packetBytes)"
+vector 271 ManetNet.nodoMovil[1].wlan[0].mac.dcf packetSentToPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, vector(packetBytes)"
+vector 272 ManetNet.nodoMovil[1].wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, vector(packetBytes)"
+vector 273 ManetNet.nodoMovil[1].wlan[0].mac.dcf packetReceivedFromPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, vector(packetBytes)"
+vector 274 ManetNet.nodoMovil[1].wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetDequeued)
+attr title "queueing times, vector"
+vector 275 ManetNet.nodoMovil[1].udp packetReceived:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceived
+attr title "packets received, vector(packetBytes)"
+vector 276 ManetNet.nodoMovil[1].udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNoPortFound(packetDropped)
+attr title "packets dropped (wrong port), vector(count)"
+vector 277 ManetNet.nodoMovil[5].app[0] packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 278 ManetNet.nodoMovil[5].udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 279 ManetNet.nodoMovil[5].lo[0].lo rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 280 ManetNet.nodoMovil[5].lo[0].lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 281 ManetNet.nodoMovil[5].ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 282 ManetNet.nodoMovil[5].wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, vector(packetBytes)"
+vector 283 ManetNet.nodoMovil[5].wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , vector(packetBytes)"
+vector 284 ManetNet.nodoMovil[3].wlan[0].mac.dcf packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 285 ManetNet.nodoMovil[3].wlan[0].mac.dcf packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 286 ManetNet.nodoMovil[3].wlan[0].mac packetDrop:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropped
+attr title "packet drops, vector(packetBytes)"
+vector 287 ManetNet.nodoMovil[3].wlan[0].mac packetDropNotAddressedToUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsNotAddressedToUs(packetDropped)
+attr title "packet drops: not addressed to us, vector(packetBytes)"
+vector 288 ManetNet.nodoMovil[6].app[0] packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 289 ManetNet.nodoMovil[6].udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 290 ManetNet.nodoMovil[6].ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 291 ManetNet.nodoMovil[6].wlan[0].mac packetReceivedFromUpper:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets received from upper layer, vector(packetBytes)"
+vector 292 ManetNet.nodoMovil[6].wlan[0].mac.dcf.channelAccess.pendingQueue packetPushed:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet pushed, vector(packetBytes)"
+vector 293 ManetNet.nodoMovil[6].wlan[0].mac.dcf.channelAccess.pendingQueue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetPushed) - count(packetPopped) - count(packetRemoved) - count(packetDropped)"
+attr title "queue length, vector"
+vector 294 ManetNet.nodoMovil[6].wlan[0].mac.dcf.channelAccess.contention backoffPeriodGenerated:vector ETV
+attr interpolationmode none
+attr title "backoff periods, vector"
+vector 295 ManetNet.nodoMovil[6].wlan[0].mac.dcf.channelAccess.contention backoffActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(backoffStarted)-count(backoffStopped)
+attr title "backoff active, vector"
+vector 296 ManetNet.nodoMovil[6].wlan[0].mac.dcf.channelAccess.pendingQueue packetPopped:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packet popped, vector(packetBytes)"
+vector 297 ManetNet.nodoMovil[6].wlan[0].mac.dcf.channelAccess.pendingQueue queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetPopped)
+attr title "queueing times, vector"
+attr unit s
+vector 298 ManetNet.nodoMovil[6].wlan[0].mac.dcf.channelAccess.inProgressFrames queueLength:vector ETV
+attr interpolationmode sample-hold
+attr source "count(packetEnqueued) - count(packetDequeued)"
+attr title "queue length, vector"
+vector 299 ManetNet.nodoMovil[6].wlan[0].mac.dcf datarateSelected:vector ETV
+attr interpolationmode none
+attr title "datarates selected, vector"
+vector 300 ManetNet.nodoMovil[6].wlan[0].mac packetSentToLower:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 301 ManetNet.nodoMovil[6].wlan[0].mac.dcf frameSequenceActive:vector ETV
+attr interpolationmode sample-hold
+attr source count(frameSequenceStarted)-count(frameSequenceFinished)
+attr title "frame sequence active, vector"
+vector 302 ManetNet.nodoMovil[6].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 303 ManetNet.nodoMovil[6].wlan[0].mac.dcf packetSentToPeer:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "packets sent, vector(packetBytes)"
+vector 304 ManetNet.nodoMovil[6].wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, vector(packetBytes)"
+vector 305 ManetNet.nodoMovil[6].wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , vector(packetBytes)"
+vector 306 ManetNet.nodoMovil[6].wlan[0].mac.dcf packetSentToPeerWithoutRetry:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211NotRetry(packetSentToPeer)
+attr title "packets sent: without retry, vector(packetBytes)"
+vector 307 ManetNet.nodoMovil[6].wlan[0].mac.dcf.channelAccess.inProgressFrames queueingTime:vector ETV
+attr interpolationmode none
+attr source queueingTime(packetDequeued)
+attr title "queueing times, vector"
+vector 308 ManetNet.nodoMovil[3].ipv4.arp arpReplySent:vector(packetBytes) ETV
+attr source arpReplySent
+attr title "ARP replies sent, vector(packetBytes)"
+vector 309 ManetNet.nodoMovil[6].wlan[0].mac.dcf packetReceivedFromPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetReceivedFromPeer)
+attr title "packets received: unicast, vector(packetBytes)"
+vector 310 ManetNet.nodoMovil[6].wlan[0].mac.dcf packetSentToPeerUnicast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Unicast(packetSentToPeer)
+attr title "packets sent: unicast, vector(packetBytes)"
+vector 311 ManetNet.nodoFijo1.ipv4.ip packetDropAddressResolutionFailed:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetDropReasonIsAddressResolutionFailed(packetDropped)
+attr title "packet drop: address resolution failed, vector(packetBytes)"
+vector 312 ManetNet.nodoMovil[0].app[0] packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 313 ManetNet.nodoMovil[0].udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 314 ManetNet.nodoMovil[0].lo[0].lo rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 315 ManetNet.nodoMovil[0].lo[0].lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 316 ManetNet.nodoMovil[0].ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 317 ManetNet.nodoMovil[0].wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, vector(packetBytes)"
+vector 318 ManetNet.nodoMovil[0].wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , vector(packetBytes)"
+vector 319 ManetNet.nodoMovil[2].app[0] packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 320 ManetNet.nodoMovil[2].udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 321 ManetNet.nodoMovil[2].ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 322 ManetNet.nodoMovil[2].wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, vector(packetBytes)"
+vector 323 ManetNet.nodoMovil[2].wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , vector(packetBytes)"
+vector 324 ManetNet.nodoMovil[2].lo[0].lo rcvdPkFromHl:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 325 ManetNet.nodoMovil[2].lo[0].lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 326 ManetNet.nodoMovil[1].app[0] packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 327 ManetNet.nodoMovil[1].udp packetSent:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSent
+attr title "packets sent, vector(packetBytes)"
+vector 328 ManetNet.nodoMovil[1].ipv4.arp arpRequestSent:vector(packetBytes) ETV
+attr source arpRequestSent
+attr title "ARP request sent, vector(packetBytes)"
+vector 329 ManetNet.nodoMovil[1].wlan[0].mac.dcf packetSentToPeerMulticast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Multicast(packetSentToPeer)
+attr title "packets sent: multicast, vector(packetBytes)"
+vector 330 ManetNet.nodoMovil[1].wlan[0].mac.dcf packetSentToPeerBroadcast:vector(packetBytes) ETV
+attr interpolationmode none
+attr source ieee80211Broadcast(packetSentToPeer)
+attr title "packets sent: broadcast , vector(packetBytes)"
+0	69219 162 0 23408 0 9.00005 13 0 3 27 69
+1	69381 8 0 0 0 0 1 0 0 0 0
+2	69389 24 0 0 0 0 3 0 2 2 4
+3	69413 8 0 0 0 0 1 0 0 0 0
+4	69421 4989 0 28045 0 9.364653560004 206 0 3 510 1326
+5	74410 8 0 0 0 0 1 0 0 0 0
+6	74418 4016 0 27857 0 9.344880765061 165 0 3 407 1057
+7	78434 8 0 0 0 0 1 0 0 0 0
+8	78442 4536 0 28022 0 9.364643205942 185 0 3 457 1187
+9	82978 8 0 0 0 0 1 0 0 0 0
+10	82986 7295 0 27727 0 9.338283687088 289 0 3 717 1863
+11	90281 9 0 0 0 0 1 0 0 0 0
+12	90290 3007 0 26745 0 9.287529394911 119 0 3 292 758
+13	93297 9 0 0 0 0 1 0 0 0 0
+14	93306 6024 0 27538 0 9.336644889328 239 0 3 592 1538
+15	99330 9 0 0 0 0 1 0 0 0 0
+16	99339 4155 0 27893 0 9.344924922468 167 0 3 412 1070
+17	103494 9 0 0 0 0 1 0 0 0 0
+18	103503 34562 0 28042 0 9.364645027227 1359 0 3 2702 6746
+19	138065 34441 0 28040 0 9.364644750918 1349 1 3 2697 6741
+20	172506 34642 0 28045 0 9.364653560004 1360 0 3 2414 5882
+21	207148 34731 0 28047 0 9.36465370634 1360 0 3 2477 6071
+22	241879 34728 0 28022 0 9.364643205942 1359 0 3 2444 5972
+23	276607 34712 0 28029 0 9.364643536291 1359 0 3 2288 5504
+24	311319 34718 0 28048 0 9.364653851918 1360 0 3 2546 6278
+25	346037 34720 0 28027 0 9.364643443096 1359 0 3 2363 5729
+26	380757 34654 0 28049 0 9.364653862171 1360 0 3 2474 6062
+27	415411 10 0 0 0 0 1 31 31 31 961
+28	415421 10 0 0 0 0 1 31 31 31 961
+29	415431 10 0 0 0 0 1 31 31 31 961
+30	415441 10 0 0 0 0 1 31 31 31 961
+31	415451 10 0 0 0 0 1 31 31 31 961
+32	415461 10 0 0 0 0 1 31 31 31 961
+33	415471 10 0 0 0 0 1 31 31 31 961
+34	415481 10 0 0 0 0 1 31 31 31 961
+35	415491 10 0 0 0 0 1 31 31 31 961
+36	415501 3662 347 27928 5 9.36 219 512 512 112128 57409536
+37	419163 3662 356 27929 5 9.36 219 520 520 113880 59217600
+38	422825 64 357 23383 5 9 5 28 28 140 3920
+39	422889 64 359 23393 5 9 5 36 36 180 6480
+40	422953 64 359 23393 5 9 5 64 64 320 20480
+41	423017 118 359 23396 5 9 10 0 1 5 5
+42	423135 63 359 23393 5 9 5 9 30 104 2464
+43	423198 118 359 23395 5 9 10 0 1 5 5
+44	423316 64 361 23396 5 9 5 64 64 320 20480
+45	423380 59 361 23396 5 9 5 0 0 0 0
+46	423439 148 361 23407 5 9.00005 10 0 1 5 5
+47	423587 94 361 23396 5 9 5 24000000 24000000 120000000 2.88e+15
+48	423681 64 361 23396 5 9 5 64 64 320 20480
+49	423745 148 361 23407 5 9.00005 10 0 1 5 5
+50	423893 296 362 23408 5 9.00005 20 0 2 20 30
+51	424189 94 372 23407 5.00005 9.00005 5 64 64 320 20480
+52	424283 94 372 23407 5.00005 9.00005 5 64 64 320 20480
+53	424377 94 372 23407 5.00005 9.00005 5 64 64 320 20480
+54	424471 94 372 23407 5.00005 9.00005 5 64 64 320 20480
+55	424565 109 372 23407 5.00005 9.00005 5 5e-05 5e-05 0.00025 1.25e-08
+56	424674 15444 375 28032 5.000051594543 9.364643560004 578 14 320 60440 14814152
+57	440118 3311 375 28032 5.000051594543 9.364643560004 124 14 320 12630 2956636
+58	443429 622 375 26555 5.000051594543 9.286308833205 24 64 64 1536 98304
+59	444051 622 375 26555 5.000051594543 9.286308833205 24 64 64 1536 98304
+60	444673 3311 375 28032 5.000051594543 9.364643560004 124 14 320 12630 2956636
+61	447984 1954 375 28032 5.000051594543 9.364643560004 73 36 292 9872 2336576
+62	449938 16020 379 28026 5.00005169298 9.364643422417 598 14 320 65604 16591600
+63	465958 2817 379 27901 5.00005169298 9.344925079876 105 14 320 13408 3621720
+64	468775 651 379 23414 5.00005169298 9.000051713214 25 64 64 1600 102400
+65	469426 651 379 23414 5.00005169298 9.000051713214 25 64 64 1600 102400
+66	470077 2817 379 27901 5.00005169298 9.344925079876 105 14 320 13408 3621720
+67	472894 1698 379 27788 5.00005169298 9.344608765061 63 36 292 11056 2944960
+68	474592 15735 383 27961 5.000051746426 9.363951205942 588 14 320 61504 15053592
+69	490327 2947 383 27961 5.000051746426 9.363951205942 110 14 320 11054 2528540
+70	493274 597 383 26567 5.000051746426 9.286308900951 23 64 64 1472 94208
+71	493871 597 383 26567 5.000051746426 9.286308900951 23 64 64 1472 94208
+72	494468 2947 383 27961 5.000051746426 9.363951205942 110 14 320 11054 2528540
+73	497415 1799 383 27961 5.000051746426 9.363951205942 67 36 292 8576 1987328
+74	499214 15961 387 28024 5.000051746848 9.364643277784 597 14 320 58450 13601988
+75	515175 2543 387 27861 5.000051746848 9.344880922468 96 14 92 5374 409596
+76	517718 522 387 26559 5.000051746848 9.286308842707 20 64 64 1280 81920
+77	518240 522 387 26559 5.000051746848 9.286308842707 20 64 64 1280 81920
+78	518762 2543 387 27861 5.000051746848 9.344880922468 96 14 92 5374 409596
+79	521305 1610 387 27861 5.000051746848 9.344880922468 61 36 64 3176 177056
+80	522915 16626 391 28039 5.000051784101 9.364643578352 621 14 320 67468 16968864
+81	539541 2250 391 26795 5.000051784101 9.287573867372 84 14 320 10432 2775168
+82	541791 677 391 26571 5.000051784101 9.286308922486 26 64 64 1664 106496
+83	542468 677 391 26571 5.000051784101 9.286308922486 26 64 64 1664 106496
+84	543145 2250 391 26795 5.000051784101 9.287573867372 84 14 320 10432 2775168
+85	545395 1398 391 26682 5.000051784101 9.287277394911 52 36 292 8528 2250560
+86	546793 15040 395 28028 5.000051801406 9.364643443096 561 14 320 57376 13813584
+87	561833 3611 395 27584 5.000051801406 9.336689295425 136 14 320 12660 2735056
+88	565444 573 395 26563 5.000051801406 9.28630888824 22 64 64 1408 90112
+89	566017 573 395 26563 5.000051801406 9.28630888824 22 64 64 1408 90112
+90	566590 3611 395 27584 5.000051801406 9.336689295425 136 14 320 12660 2735056
+91	570201 2129 395 27471 5.000051801406 9.336392889328 80 36 292 9636 2121744
+92	572330 14363 399 28030 5.000051809223 9.364643536291 536 14 320 53126 12488300
+93	586693 4218 399 27698 5.000051809223 9.338239687088 159 14 320 13690 2744844
+94	590911 550 399 26577 5.000051809223 9.286308927573 21 64 64 1344 86016
+95	591461 550 399 26577 5.000051809223 9.286308927573 21 64 64 1344 86016
+96	592011 4218 399 27698 5.000051809223 9.338239687088 159 14 320 13690 2744844
+97	596229 2446 399 27698 5.000051809223 9.338239687088 92 36 292 10176 2089728
+98	598675 1592 772 27597 6.487673026277 9.337673026277 58 256 256 14848 3801088
+99	600267 1592 774 27598 6.487673026277 9.337673026277 58 264 264 15312 4042368
+100	601859 134 775 2277 6.487673026277 6.837673026277 5 28 28 140 3920
+101	601993 2019 777 27601 6.487673026277 9.337673026277 72 36 292 14472 3849504
+102	604012 2019 777 27601 6.487673026277 9.337673026277 72 64 320 16488 4716384
+103	606031 3805 777 27603 6.487673026277 9.337673026277 144 0 1 72 72
+104	609836 1953 777 27601 6.487673026277 9.337673026277 72 0 31 1246 28156
+105	611789 5339 777 27602 6.487673026277 9.337673026277 202 0 1 101 101
+106	617128 2018 779 27603 6.487673026277 9.337673026277 72 64 320 16488 4716384
+107	619146 2115 779 27603 6.487673026277 9.337673026277 72 0 0.000806129598 0.012110975781 6.3504016523773e-06
+108	621261 3803 779 27666 6.487673026277 9.337851687079 144 0 1 72 72
+109	625064 4777 779 27698 6.487673026277 9.338239687088 143 24000000 24000000 3432000000 8.2368e+16
+110	629841 3964 779 27710 6.487673026277 9.338249687088 143 14 320 17482 4730300
+111	633805 3803 779 27666 6.487673026277 9.337851687079 144 0 1 72 72
+112	637608 15108 780 27727 6.487673026277 9.338283687088 572 0 2 572 858
+113	652716 3964 790 27726 6.487723026277 9.338283687088 143 14 320 17482 4730300
+114	656680 134 790 2292 6.487723026277 6.837723026277 5 64 64 320 20480
+115	656814 134 790 2292 6.487723026277 6.837723026277 5 64 64 320 20480
+116	656948 3964 790 27726 6.487723026277 9.338283687088 143 14 320 17482 4730300
+117	660912 2779 790 27666 6.487723026277 9.337851687079 72 5e-05 0.000178660802 0.01044681452 1.652211093718e-06
+118	663691 53 799 6562 6.487723093661 7.694524750553 2 28 28 56 1568
+119	663744 1676 801 27477 6.487723093661 9.336392889328 60 36 292 10740 2745168
+120	665420 1676 801 27477 6.487723093661 9.336392889328 60 64 320 12420 3393648
+121	667096 3168 801 27526 6.487723093661 9.336586889328 120 0 2 62 64
+122	670264 1627 801 27477 6.487723093661 9.336392889328 60 0 31 961 20537
+123	671891 4745 801 27525 6.487723093661 9.336586889328 180 0 1 90 90
+124	676636 18718 819 28041 6.487724512323 9.364644750918 674 14 320 70288 17198120
+125	695354 569 819 26581 6.487724512323 9.286310307793 21 64 64 1344 86016
+126	695923 569 819 26581 6.487724512323 9.286310307793 21 64 64 1344 86016
+127	696492 569 819 26581 6.487724512323 9.286310307793 21 64 64 1344 86016
+128	697061 569 819 26581 6.487724512323 9.286310307793 21 64 64 1344 86016
+129	697630 569 819 26581 6.487724512323 9.286310307793 21 36 36 756 27216
+130	698199 18704 823 28043 6.487724877749 9.364645027227 674 14 320 70288 17198120
+131	716903 569 823 26585 6.487724877749 9.286310400952 21 64 64 1344 86016
+132	717472 569 823 26585 6.487724877749 9.286310400952 21 64 64 1344 86016
+133	718041 569 823 26585 6.487724877749 9.286310400952 21 64 64 1344 86016
+134	718610 569 823 26585 6.487724877749 9.286310400952 21 64 64 1344 86016
+135	719179 569 823 26585 6.487724877749 9.286310400952 21 36 36 756 27216
+136	719748 1674 827 27526 6.487773093661 9.336586889328 60 64 320 12420 3393648
+137	721422 2014 827 27526 6.487773093661 9.336586889328 60 0 0.000714 0.016608525738 7.5018333256449e-06
+138	723436 3167 827 27584 6.487773093661 9.336689295425 120 0 2 62 64
+139	726603 3942 827 27526 6.487773093661 9.336586889328 118 24000000 24000000 2832000000 6.7968e+16
+140	730545 3265 827 27526 6.487773093661 9.336586889328 118 14 320 13232 3405016
+141	733810 3167 827 27584 6.487773093661 9.336689295425 120 0 1 60 60
+142	736977 12466 828 27538 6.487773093661 9.336644889328 472 0 2 472 708
+143	749443 3266 838 27537 6.487823093661 9.336644889328 118 14 320 13232 3405016
+144	752709 3160 838 27537 6.487823093661 9.336644889328 114 14 320 12976 3388632
+145	755869 3266 838 27537 6.487823093661 9.336644889328 118 14 320 13232 3405016
+146	759135 23065 838 28028 6.487823093661 9.364643443096 806 0 4.4e-05 0.011836 5.20784e-07
+147	782200 3806 841 27698 6.487823161046 9.338239687088 138 14 320 12346 2658828
+148	786006 25738 847 28039 6.487823203767 9.364643578352 902 0 4.4e-05 0.013244 5.82736e-07
+149	811744 14913 847 28039 6.487823203767 9.364643578352 537 14 320 57036 14193696
+150	826657 14913 847 28039 6.487823203767 9.364643578352 537 14 320 57036 14193696
+151	841570 14913 847 28039 6.487823203767 9.364643578352 537 14 320 57036 14193696
+152	856483 14913 847 28039 6.487823203767 9.364643578352 537 14 320 57036 14193696
+153	871396 24415 849 28024 6.487823214145 9.364643277784 857 0 4.4e-05 0.012584 5.53696e-07
+154	895811 13919 849 28024 6.487823214145 9.364643277784 501 14 320 53076 13192392
+155	909730 13919 849 28024 6.487823214145 9.364643277784 501 14 320 53076 13192392
+156	923649 13919 849 28024 6.487823214145 9.364643277784 501 14 320 53076 13192392
+157	937568 13919 849 28024 6.487823214145 9.364643277784 501 14 320 53076 13192392
+158	951487 24733 851 28026 6.487823234754 9.364643422417 866 0 4.4e-05 0.012716 5.59504e-07
+159	976220 13696 851 28026 6.487823234754 9.364643422417 493 14 320 52196 12969880
+160	989916 13696 851 28026 6.487823234754 9.364643422417 493 14 320 52196 12969880
+161	1003612 13696 851 28026 6.487823234754 9.364643422417 493 14 320 52196 12969880
+162	1017308 13696 851 28026 6.487823234754 9.364643422417 493 14 320 52196 12969880
+163	1031004 24214 853 28021 6.487823257961 9.364643205942 848 0 4.4e-05 0.012452 5.47888e-07
+164	1055218 13266 853 27897 6.487823257961 9.344924994159 478 14 320 50450 12525052
+165	1068484 13266 853 27897 6.487823257961 9.344924994159 478 14 320 50450 12525052
+166	1081750 13266 853 27897 6.487823257961 9.344924994159 478 14 320 50450 12525052
+167	1095016 13266 853 27897 6.487823257961 9.344924994159 478 14 320 50450 12525052
+168	1108282 23712 855 27983 6.487823371381 9.36399485189 834 0 4.4e-05 0.012232 5.38208e-07
+169	1131994 12587 855 27909 6.487823371381 9.344925224477 454 14 320 47810 11857516
+170	1144581 12587 855 27909 6.487823371381 9.344925224477 454 14 320 47810 11857516
+171	1157168 12587 855 27909 6.487823371381 9.344925224477 454 14 320 47810 11857516
+172	1169755 12587 855 27909 6.487823371381 9.344925224477 454 14 320 47810 11857516
+173	1182342 27990 857 28041 6.487824588214 9.364644750918 980 0 4.4e-05 0.014388 6.33072e-07
+174	1210332 18149 857 28041 6.487824588214 9.364644750918 653 14 320 68944 17112104
+175	1228481 18149 857 28041 6.487824588214 9.364644750918 653 14 320 68944 17112104
+176	1246630 18149 857 28041 6.487824588214 9.364644750918 653 14 320 68944 17112104
+177	1264779 18149 857 28041 6.487824588214 9.364644750918 653 14 320 68944 17112104
+178	1282928 27948 859 28043 6.487824934823 9.364645027227 980 0 4.4e-05 0.014388 6.33072e-07
+179	1310876 18135 859 28043 6.487824934823 9.364645027227 653 14 320 68944 17112104
+180	1329011 18135 859 28043 6.487824934823 9.364645027227 653 14 320 68944 17112104
+181	1347146 18135 859 28043 6.487824934823 9.364645027227 653 14 320 68944 17112104
+182	1365281 18135 859 28043 6.487824934823 9.364645027227 653 14 320 68944 17112104
+183	1383416 3830 872 27726 6.487867161046 9.338283687088 138 14 320 17162 4709820
+184	1387246 3152 879 27584 6.487867228432 9.336689295425 114 14 320 11252 2644944
+185	1390398 2322 879 27584 6.487867228432 9.336689295425 60 5e-05 0.000430570572 0.008522522631 1.4081545475272e-06
+186	1392720 21939 909 28030 6.488391161046 9.364643536291 767 0 4.4e-05 0.011264 4.95616e-07
+187	1414659 911 917 27752 6.488391228436 9.338325558277 32 264 264 8448 2230272
+188	1415570 870 917 27752 6.488391228436 9.338325558277 32 1 32 528 11440
+189	1416440 108 1103 13356 6.537723291817 8.279520916121 4 28 28 112 3136
+190	1416548 1467 1105 27935 6.537723291817 9.36381685189 53 36 292 8012 1904816
+191	1418015 1467 1105 27935 6.537723291817 9.36381685189 53 64 320 9496 2395040
+192	1419482 2786 1105 27937 6.537723291817 9.36381685189 106 0 1 53 53
+193	1422268 1430 1105 27935 6.537723291817 9.36381685189 53 1 30 790 15646
+194	1423698 4487 1105 27936 6.537723291817 9.36381685189 170 0 1 85 85
+195	1428185 1467 1115 27937 6.537833291817 9.36381685189 53 64 320 9496 2395040
+196	1429652 1619 1115 27937 6.537833291817 9.36381685189 53 0 0.000978900808 0.012016900808 5.9284187919031e-06
+197	1431271 2802 1115 28000 6.537833291817 9.363995559996 106 0 1 53 53
+198	1434073 3413 1115 28032 6.537833291817 9.364643560004 102 24000000 24000000 2448000000 5.8752e+16
+199	1437486 2822 1115 28044 6.537833291817 9.364653560004 102 14 320 10182 2404644
+200	1440308 2802 1115 28000 6.537833291817 9.363995559996 106 0 1 53 53
+201	1443110 10742 1116 28046 6.537833291817 9.364653560004 406 0 2 407 611
+202	1453852 2794 1126 27948 6.537883291817 9.36395085189 101 14 320 10168 2404448
+203	1456646 2740 1126 27948 6.537883291817 9.36395085189 99 14 320 10040 2396256
+204	1459386 2794 1126 27948 6.537883291817 9.36395085189 101 14 320 10168 2404448
+205	1462180 11854 1139 28028 6.537883570254 9.364643443096 425 14 320 44716 11078528
+206	1474034 11854 1139 28028 6.537883570254 9.364643443096 425 14 320 44716 11078528
+207	1485888 11854 1139 28028 6.537883570254 9.364643443096 425 14 320 44716 11078528
+208	1497742 11854 1139 28028 6.537883570254 9.364643443096 425 14 320 44716 11078528
+209	1509596 2789 1178 28032 6.537927822904 9.364643560004 100 14 320 11094 2858332
+210	1512385 2072 1178 28000 6.537927822904 9.363995559996 53 5e-05 0.000178708106 0.006896078673 9.8416073813241e-07
+211	1514457 938 1213 27630 6.538151822907 9.337807356676 33 264 264 8712 2299968
+212	1515395 896 1213 27630 6.538151822907 9.337807356676 33 1 33 561 12529
+213	1516291 80 1551 9001 6.63772326043 7.944524668607 3 28 28 84 2352
+214	1516371 1324 1553 27967 6.63772326043 9.363951205942 47 36 292 7172 1717904
+215	1517695 1324 1553 27967 6.63772326043 9.363951205942 47 64 320 8488 2156384
+216	1519019 2516 1553 28010 6.63772326043 9.364585205942 94 0 1 47 47
+217	1521535 1286 1553 27967 6.63772326043 9.363951205942 47 0 30 659 13389
+218	1522821 3960 1553 28009 6.63772326043 9.364585205942 148 0 1 74 74
+219	1526781 1324 1567 28010 6.63829326043 9.364585205942 47 64 320 8488 2156384
+220	1528105 1456 1567 28010 6.63829326043 9.364585205942 47 0 0.000654 0.010192689668 4.718886006378e-06
+221	1529561 2487 1567 28010 6.63829326043 9.364585205942 93 0 1 47 47
+222	1532048 3075 1567 28010 6.63829326043 9.364585205942 91 24000000 24000000 2184000000 5.2416e+16
+223	1535123 2548 1567 28010 6.63829326043 9.364585205942 91 14 320 9104 2165008
+224	1537671 2487 1567 28010 6.63829326043 9.364585205942 93 0 1 47 47
+225	1540158 9752 1568 28022 6.63829326043 9.364643205942 364 0 2 364 546
+226	1549910 2548 1578 28021 6.63834326043 9.364643205942 91 14 320 9104 2165008
+227	1552458 2464 1578 28021 6.63834326043 9.364643205942 88 14 320 8912 2152720
+228	1554922 2548 1578 28021 6.63834326043 9.364643205942 91 14 320 9104 2165008
+229	1557470 2437 1628 27961 6.638387728782 9.363951205942 87 14 320 9582 2434332
+230	1559907 1791 1628 27368 6.638387728782 9.329649282716 46 5e-05 0.000178714194 0.005977036503 8.6048105795313e-07
+231	1561698 747 1663 27964 6.639191728807 9.363951205942 26 264 264 6864 1812096
+232	1562445 712 1663 27964 6.639191728807 9.363951205942 26 1 26 351 6201
+233	1563157 784 1968 26038 6.737673026277 9.237673026277 28 56 284 4760 1173088
+234	1563941 784 1968 26038 6.737673026277 9.237673026277 28 56 284 4760 1173088
+235	1564725 1030 1970 27171 6.737673026277 9.31395118166 36 264 264 9504 2509056
+236	1565755 985 1970 27171 6.737673026277 9.31395118166 36 1 36 666 16206
+237	1566740 165 2009 26573 6.787723081682 9.286308922486 6 28 28 168 4704
+238	1566905 886 2011 26688 6.787723081682 9.287277394911 32 36 64 1880 114272
+239	1567791 886 2011 26688 6.787723081682 9.287277394911 32 64 92 2776 244640
+240	1568677 1707 2011 26733 6.787723081682 9.287471394911 64 0 1 32 32
+241	1570384 874 2011 26688 6.787723081682 9.287277394911 32 0 30 482 10002
+242	1571258 3308 2011 26732 6.787723081682 9.287471394911 124 0 1 62 62
+243	1574566 885 2041 26733 6.788133081682 9.287471394911 32 64 92 2776 244640
+244	1575451 1081 2041 26733 6.788133081682 9.287471394911 32 5e-05 0.000847003864 0.012849618322 6.5879310078056e-06
+245	1576532 1705 2041 26795 6.788133081682 9.287573867372 64 0 1 32 32
+246	1578237 1954 2041 26733 6.788133081682 9.287471394911 58 24000000 24000000 1392000000 3.3408e+16
+247	1580191 1606 2041 26733 6.788133081682 9.287471394911 58 14 92 3140 249736
+248	1581797 1705 2041 26795 6.788133081682 9.287573867372 64 0 1 32 32
+249	1583502 6192 2042 26745 6.788133081682 9.287529394911 232 0 2 232 348
+250	1589694 1606 2052 26744 6.788183081682 9.287529394911 58 14 92 3140 249736
+251	1591300 1606 2052 26744 6.788183081682 9.287529394911 58 14 92 3140 249736
+252	1592906 1606 2052 26744 6.788183081682 9.287529394911 58 14 92 3140 249736
+253	1594512 1631 2089 26795 6.7882271925 9.287573867372 58 14 320 8768 2668672
+254	1596143 1258 2089 26795 6.7882271925 9.287573867372 32 9.4110818e-05 0.000102714257 0.003227896646 3.2591164112239e-07
+255	1597401 747 2129 26685 6.788951192505 9.287277394911 26 264 264 6864 1812096
+256	1598148 712 2129 26685 6.788951192505 9.287277394911 26 1 26 351 6201
+257	1598860 137 2305 14086 6.837723203941 8.313867006518 5 28 28 140 3920
+258	1598997 1191 2307 27794 6.837723203941 9.344608765061 43 36 292 3268 402832
+259	1600188 1191 2307 27794 6.837723203941 9.344608765061 43 64 320 4472 619552
+260	1601379 2290 2307 27845 6.837723203941 9.344822765061 86 0 1 43 43
+261	1603669 1168 2307 27794 6.837723203941 9.344608765061 43 0 29 534 10092
+262	1604837 4154 2307 27844 6.837723203941 9.344822765061 156 0 1 78 78
+263	1608991 1191 2329 27845 6.837973203941 9.344822765061 43 64 320 4472 619552
+264	1610182 1417 2329 27845 6.837973203941 9.344822765061 43 0 0.000674 0.0138 6.11232e-06
+265	1611599 2291 2329 27901 6.837973203941 9.344925079876 86 0 1 43 43
+266	1613890 2725 2329 27845 6.837973203941 9.344822765061 81 24000000 24000000 1944000000 4.6656e+16
+267	1616615 2242 2329 27845 6.837973203941 9.344822765061 81 14 320 5004 627000
+268	1618857 2291 2329 27901 6.837973203941 9.344925079876 86 0 1 43 43
+269	1621148 8632 2330 27857 6.837973203941 9.344880765061 324 0 2 324 486
+270	1629780 2242 2340 27856 6.838023203941 9.344880765061 81 14 320 5004 627000
+271	1632022 2214 2340 27856 6.838023203941 9.344880765061 80 14 320 4940 622904
+272	1634236 2242 2340 27856 6.838023203941 9.344880765061 81 14 320 5004 627000
+273	1636478 2246 2386 27901 6.838067559286 9.344925079876 80 14 320 11808 3519320
+274	1638724 1688 2386 27901 6.838067559286 9.344925079876 43 5e-05 0.000178472446 0.004536767236 4.9863800537367e-07
+275	1640412 974 2421 27791 6.8386915593 9.344608765061 34 264 264 8976 2369664
+276	1641386 931 2421 27791 6.8386915593 9.344608765061 34 1 34 595 13685
+277	1642317 1147 4052 27747 7.388325558277 9.338325558277 40 256 256 10240 2621440
+278	1643464 1147 4054 27748 7.388325558277 9.338325558277 40 264 264 10560 2787840
+279	1644611 511 4056 27754 7.388325558277 9.338325558277 18 56 284 3060 754128
+280	1645122 511 4056 27754 7.388325558277 9.338325558277 18 56 284 3060 754128
+281	1645633 108 4305 5805 7.438325558277 7.638325558277 4 28 28 112 3136
+282	1645741 106 4320 5820 7.438643490046 7.638543264274 4 64 64 256 16384
+283	1645847 106 4320 5820 7.438643490046 7.638543264274 4 64 64 256 16384
+284	1645953 10522 4371 28030 7.439283677012 9.364643536291 377 14 320 39436 9743456
+285	1656475 10522 4371 28030 7.439283677012 9.364643536291 377 14 320 39436 9743456
+286	1666997 10522 4371 28030 7.439283677012 9.364643536291 377 14 320 39436 9743456
+287	1677519 10522 4371 28030 7.439283677012 9.364643536291 377 14 320 39436 9743456
+288	1688041 972 6075 27766 7.64447460766 9.34447460766 35 256 256 8960 2293760
+289	1689013 972 6077 27767 7.64447460766 9.34447460766 35 264 264 9240 2439360
+290	1689985 156 6078 9572 7.64447460766 7.99447460766 6 28 28 168 4704
+291	1690141 1134 6080 27770 7.64447460766 9.34447460766 41 36 292 10436 2992016
+292	1691275 1134 6080 27770 7.64447460766 9.34447460766 41 64 320 11584 3608576
+293	1692409 2116 6080 27772 7.64447460766 9.34447460766 82 0 1 41 41
+294	1694525 1083 6080 27770 7.64447460766 9.34447460766 41 0 31 615 12795
+295	1695608 2428 6080 27771 7.64447460766 9.34447460766 94 0 1 47 47
+296	1698036 1134 6082 27772 7.64447460766 9.34447460766 41 64 320 11584 3608576
+297	1699170 1099 6082 27772 7.64447460766 9.34447460766 41 0 0.000674 0.002924 1.652696e-06
+298	1700269 2141 6082 27829 7.64447460766 9.344652922464 82 0 1 41 41
+299	1702410 2720 6082 27861 7.64447460766 9.344880922468 82 24000000 24000000 1968000000 4.7232e+16
+300	1705130 2263 6082 27879 7.64447460766 9.344890922468 82 14 320 12158 3616612
+301	1707393 2141 6082 27829 7.64447460766 9.344652922464 82 0 1 41 41
+302	1709534 8584 6083 27893 7.64447460766 9.344924922468 328 0 2 328 492
+303	1718118 2263 6093 27892 7.64452460766 9.344924922468 82 14 320 12158 3616612
+304	1720381 156 6093 9587 7.64452460766 7.99452460766 6 64 64 384 24576
+305	1720537 156 6093 9587 7.64452460766 7.99452460766 6 64 64 384 24576
+306	1720693 2263 6093 27892 7.64452460766 9.344924922468 82 14 320 12158 3616612
+307	1722956 1556 6093 27829 7.64452460766 9.344652922464 41 5e-05 0.000178591417 0.006542500867 1.1283955736778e-06
+308	1724512 26 6110 6110 7.64452482239 7.64452482239 1 28 28 28 784
+309	1724538 2097 6150 27861 7.645205037139 9.344880922468 76 14 92 4094 327676
+310	1726635 2107 6178 27892 7.645249037139 9.344924922468 76 14 320 11774 3592036
+311	1728742 2250 9847 9847 8 8 150 540 540 81000 43740000
+312	1730992 783 9910 27931 8.01381685189 9.36381685189 28 256 256 7168 1835008
+313	1731775 783 9912 27932 8.01381685189 9.36381685189 28 264 264 7392 1951488
+314	1732558 385 11168 25722 8.11381685189 9.21381685189 14 56 284 2380 586544
+315	1732943 385 11168 25722 8.11381685189 9.21381685189 14 56 284 2380 586544
+316	1733328 54 12137 14066 8.21381685189 8.31381685189 2 28 28 56 1568
+317	1733382 54 12152 14081 8.21386685189 8.31386685189 2 64 64 128 8192
+318	1733436 54 12152 14081 8.21386685189 8.31386685189 2 64 64 128 8192
+319	1733490 667 12414 27297 8.229470575461 9.329470575461 23 256 256 5888 1507328
+320	1734157 667 12416 27298 8.229470575461 9.329470575461 23 264 264 6072 1603008
+321	1734824 84 12417 18321 8.229470575461 8.629470575461 3 28 28 84 2352
+322	1734908 84 12432 18336 8.229520575461 8.629520575461 3 64 64 192 12288
+323	1734992 84 12432 18336 8.229520575461 8.629520575461 3 64 64 192 12288
+324	1735076 228 19079 26527 8.679470575461 9.279470575461 8 56 284 1360 335168
+325	1735304 228 19079 26527 8.679470575461 9.279470575461 8 56 284 1360 335168
+326	1735532 87 25880 27447 9.236258686287 9.336258686287 3 256 256 768 196608
+327	1735619 87 25882 27448 9.236258686287 9.336258686287 3 264 264 792 209088
+328	1735706 28 26537 26537 9.286258686287 9.286258686287 1 28 28 28 784
+329	1735734 28 26552 26552 9.286308686287 9.286308686287 1 64 64 64 4096
+330	1735762 28 26552 26552 9.286308686287 9.286308686287 1 64 64 64 4096
+vector 331 ManetNet.nodoFijo1.app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 332 ManetNet.nodoFijo2.app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 333 ManetNet.nodoMovil[0].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 334 ManetNet.nodoMovil[1].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 335 ManetNet.nodoMovil[2].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 336 ManetNet.nodoMovil[3].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 337 ManetNet.nodoMovil[4].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 338 ManetNet.nodoMovil[5].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 339 ManetNet.nodoMovil[6].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+331	1737107 1497 28049 28049 0.1 9.364653862171 94 0 0 0 0
+332	1738604 1497 28049 28049 0.1 9.364653862171 94 0 0 0 0
+333	1740101 1497 28049 28049 0.1 9.364653862171 94 0 0 0 0
+334	1741598 1497 28049 28049 0.1 9.364653862171 94 0 0 0 0
+335	1743095 1497 28049 28049 0.1 9.364653862171 94 0 0 0 0
+336	1744592 1497 28049 28049 0.1 9.364653862171 94 0 0 0 0
+337	1746089 1497 28049 28049 0.1 9.364653862171 94 0 0 0 0
+338	1747586 1497 28049 28049 0.1 9.364653862171 94 0 0 0 0
+339	1749083 1497 28049 28049 0.1 9.364653862171 94 0 0 0 0
+
