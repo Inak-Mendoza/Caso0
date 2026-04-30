@@ -38,6 +38,3 @@ Una vez dentro del entorno de OMNeT++ y con la biblioteca INET importada:
 ## 📊 Detalles de la Red
 
 La red simulada, denominada `ManetNet`, utiliza el estándar **IEEE 802.11** para la comunicación inalámbrica. Está diseñada para evaluar la conectividad entre `nodoFijo1` y `nodoFijo2` a través de una nube de `nodoMovil` que actúan como intermediarios dinámicos.
-
----
-**Autor:** [Inak-Mendoza](https://github.com/Inak-Mendoza)
